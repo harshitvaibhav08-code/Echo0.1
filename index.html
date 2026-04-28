@@ -1,0 +1,80 @@
+
+Action: file_editor create /app/index.html --file-text "<!DOCTYPE html>
+<html lang=\"en\">
+<head>
+    <meta charset=\"UTF-8\" />
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />
+    <title>Modular Web App</title>
+
+    <!-- Core Stylesheet -->
+    <link rel=\"stylesheet\" href=\"style.css\" />
+</head>
+<body>
+
+    <!--
+        ============================================================
+        PAGE 1 — Landing
+        Centered hero with a single call-to-action button.
+        ============================================================
+    -->
+    <section id=\"page-1\" class=\"page page-landing\" data-testid=\"page-1-landing\">
+        <div class=\"landing-inner\">
+            <h1 class=\"title\" data-testid=\"landing-title\">Shall We Begin?</h1>
+            <button
+                id=\"start-btn\"
+                class=\"primary-button\"
+                type=\"button\"
+                data-testid=\"start-btn\"
+            >
+                Yes
+            </button>
+        </div>
+    </section>
+
+    <!--
+        ============================================================
+        PAGE 2 — Dashboard
+        Hidden by default. Becomes visible after the user clicks \"Yes\".
+        Three equal vertical sections separated by horizontal dividers.
+        Each section has a placeholder <h2> and an empty container
+        where the corresponding quiz module will be injected later.
+        ============================================================
+    -->
+    <main id=\"page-2\" class=\"page page-dashboard hidden\" data-testid=\"page-2-dashboard\">
+
+        <!-- Section 1: Cineprofile -->
+        <section id=\"cineprofile-section\" class=\"dashboard-section\" data-testid=\"cineprofile-section\">
+            <h2 class=\"section-title\">Cineprofile</h2>
+            <div id=\"cineprofile-container\" class=\"module-container\" data-testid=\"cineprofile-container\">
+                <!-- Cineprofile quiz module will be inserted here -->
+            </div>
+        </section>
+
+        <hr class=\"section-divider\" />
+
+        <!-- Section 2: Vacation -->
+        <section id=\"vacation-section\" class=\"dashboard-section\" data-testid=\"vacation-section\">
+            <h2 class=\"section-title\">Vacation</h2>
+            <div id=\"vacation-container\" class=\"module-container\" data-testid=\"vacation-container\">
+                <!-- Vacation quiz module will be inserted here -->
+            </div>
+        </section>
+
+        <hr class=\"section-divider\" />
+
+        <!-- Section 3: Business -->
+        <section id=\"business-section\" class=\"dashboard-section\" data-testid=\"business-section\">
+            <h2 class=\"section-title\">Business</h2>
+            <div id=\"business-container\" class=\"module-container\" data-testid=\"business-container\">
+                <!-- Business quiz module will be inserted here -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Navigation Logic -->
+    <script src=\"script.js\"></script>
+</body>
+</html>
+"
+Observation: Create successful: /app/index.html
